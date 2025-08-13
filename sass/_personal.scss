@@ -1,0 +1,19 @@
+@use 'variables';
+
+.personal {
+    text-align: center;
+    font-family: variables.$font-stack;
+
+    .foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+
+    .redes a {
+    margin: 0 5px;
+    color: variables.$secondary-color;
+    text-decoration: none;
+    }
+}

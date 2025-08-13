@@ -1,0 +1,13 @@
+@use 'variables';
+
+.skills {
+    display: flex;
+    gap: 2rem;
+
+    .columna {
+    flex: 1;
+    background-color: lighten(variables.$primary-color, 45%);
+    padding: 1rem;
+    border-radius: 10px;
+    }
+}

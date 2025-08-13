@@ -1,0 +1,9 @@
+@use 'variables';
+
+.teaser {
+    border: 1px solid variables.$secondary-color;
+    background-color: lighten(variables.$secondary-color, 40%);
+    padding: 1rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+}
