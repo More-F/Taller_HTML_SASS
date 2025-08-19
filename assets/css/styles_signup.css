@@ -1,0 +1,231 @@
+/* Variables de colores para el tema neón rojo oscuro */
+:root {
+    --neon-red: #ff003c;
+    --neon-pink: #ff2a6d;
+    --dark-bg: #0d0117;
+    --darker-bg: #07000f;
+    --input-bg: #1a0529;
+    --text-color: #ffffff;
+    --text-muted: #a0a0a0;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 0, 60, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 42, 109, 0.05) 0%, transparent 20%);
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--darker-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 60, 0.2),
+                0 0 30px rgba(255, 42, 109, 0.1),
+                inset 0 0 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 0, 60, 0.3);
+}
+
+/* Títulos con efecto neón */
+.neon-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 0 0 5px var(--neon-red),
+                 0 0 10px var(--neon-red),
+                 0 0 15px var(--neon-red),
+                 0 0 20px var(--neon-pink);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--input-bg);
+    border: 2px solid rgba(255, 0, 60, 0.3);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--neon-red);
+    box-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
+}
+
+/* Estilos para campos válidos e inválidos */
+input.valid {
+    border-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+input.invalid {
+    border-color: var(--neon-red);
+    box-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
+}
+
+/* Mensajes de error */
+.error-message {
+    display: block;
+    color: var(--neon-red);
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+    text-shadow: 0 0 3px rgba(255, 0, 60, 0.7);
+}
+
+/* Checkbox personalizado */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--neon-red);
+}
+
+/* Botón con efecto neón */
+.neon-button {
+    width: 100%;
+    padding: 15px;
+    background-color: transparent;
+    color: var(--neon-red);
+    border: 2px solid var(--neon-red);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px var(--neon-red);
+    box-shadow: 0 0 5px var(--neon-red),
+                inset 0 0 5px var(--neon-red);
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.neon-button:hover {
+    background-color: var(--neon-red);
+    color: var(--dark-bg);
+    box-shadow: 0 0 20px var(--neon-red),
+                0 0 40px var(--neon-pink);
+}
+
+.neon-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.neon-button:disabled:hover {
+    background-color: transparent;
+    color: var(--neon-red);
+    box-shadow: 0 0 5px var(--neon-red),
+                inset 0 0 5px var(--neon-red);
+}
+
+/* Requisitos de contraseña */
+.password-requirements {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(26, 5, 41, 0.7);
+    border-radius: 5px;
+    border-left: 3px solid var(--neon-pink);
+}
+
+.password-requirements p {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--neon-pink);
+}
+
+.password-requirements ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+.password-requirements li {
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.password-requirements li.valid {
+    color: #00ff00;
+    text-shadow: 0 0 3px rgba(0, 255, 0, 0.7);
+}
+
+/* Mensaje de confirmación */
+.confirmation-message {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(26, 5, 41, 0.8);
+    border-radius: 10px;
+    border: 2px solid var(--neon-pink);
+    box-shadow: 0 0 20px rgba(255, 42, 109, 0.5);
+}
+
+.confirmation-message p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"] {
+        padding: 10px;
+    }
+    
+    .neon-button {
+        padding: 12px;
+    }
+}

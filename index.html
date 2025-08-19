@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV con HTML + SASS</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-text">Andres Moreno</div>
+        </div>
+        <div class="nav-links">
+            <a href="/index.html" class="nav-link active" data-page="cv">
+                <i class="fas fa-user"></i>
+                <span>Currículum</span>
+            </a>
+            <a href="/sign_up.html" class="nav-link" data-page="form">
+                <i class="fas fa-file-alt"></i>
+                <span>Formulario</span>
+            </a>
+            <a href="https://github.com/More-F" target="_blank" class="nav-link">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/more-f/" target="_blank" class="nav-link">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </nav>
     <main>
     <!-- Información Personal -->
     <section class="personal">
