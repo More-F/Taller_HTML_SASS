@@ -211,6 +211,10 @@ input.invalid {
 .hidden {
     display: none;
 }
+.g-recaptcha{
+    display: flex;
+    justify-content: center;
+}
 
 /* Responsive */
 @media (max-width: 768px) {

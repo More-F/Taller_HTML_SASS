@@ -7,32 +7,10 @@
     <link rel="stylesheet" href="/assets/css/styles_signup.css">
     <link rel="stylesheet" href="/assets/css/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <div class="logo-text">Andres Moreno</div>
-        </div>
-        <div class="nav-links">
-            <a href="/index.html" class="nav-link active" data-page="cv">
-                <i class="fas fa-user"></i>
-                <span>Currículum</span>
-            </a>
-            <a href="/sign_up.html" class="nav-link" data-page="form">
-                <i class="fas fa-file-alt"></i>
-                <span>Formulario</span>
-            </a>
-            <a href="https://github.com/More-F" target="_blank" class="nav-link">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/more-f/" target="_blank" class="nav-link">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-            </a>
-        </div>
-    </nav>
     <div class="container">
         <h1 class="neon-title">Registro de Usuario</h1>
         <form id="registrationForm" class="neon-form">
@@ -101,6 +79,10 @@
                 <span class="error-message" id="terms-error"></span>
             </div>
 
+            <form action="" method="POST">
+                <div class="g-recaptcha" data-sitekey="6LeMa6orAAAAAGLhg_o9jBWsLEtZEvX2uhaCuqr9" data-action="LOGIN"></div>
+                <br/>
+            </form>
             <!-- Botón de envío -->
             <button type="submit" id="submitBtn" class="neon-button" disabled>Registrarse</button>
         </form>
@@ -110,9 +92,7 @@
             <h2 class="neon-title">¡Registro Exitoso!</h2>
             <p>Tu formulario ha sido validado correctamente.</p>
             <button id="resetForm" class="neon-button">Registrar otro usuario</button>
-        </div>
+        </div> 
     </div>
-
-    <script src="/assets/js/script_signup.js"></script>
 </body>
 </html>
